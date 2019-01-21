@@ -17,9 +17,10 @@ RUN apt-get install -y nodejs mongodb-org
 RUN mkdir -p /data/db
 
 COPY . /app
+RUN chmod +x /app/container-scripts/*.sh
 
 RUN npm install
 
 EXPOSE 3000
 
-ENTRYPOINT [ "/bin/bash", "/app/container-scripts/start-app.sh" ]
+ENTRYPOINT [ "/bin/bash", "/app/container-scripts/start-watch.sh" ]

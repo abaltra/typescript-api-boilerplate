@@ -6,4 +6,6 @@ sleep 5
 
 cd /app
 
-npm run prod
+npm install
+
+npm run dev:watch
